@@ -18,7 +18,7 @@ abstract class ShoppingDatabase: RoomDatabase(){
         @Volatile
         private var instance: ShoppingDatabase?=null
         private val Lock=Any()
-  //whenever the instance for shopping databse is created (shoopingdatabse()), the function gets called
+  //whenever the instance for shopping databse is created (shoppingdatabse()), the function gets called
         operator fun invoke(context: Context)= instance ?: synchronized(Lock)
   {
       //Used to create if our instance is null.
